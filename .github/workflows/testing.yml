@@ -9,14 +9,22 @@ env:
 
 jobs:
   install-circt:
-    name: Install CIRCT
-    uses: circt/install-circt@v1.1.1
+    name: install-circt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install CIRCT
+        uses: circt/install-circt@v1.1.1
   update-circt:
-    name: Update CIRCT
-    uses: circt/update-circt@v1.0.0
-    with:
-      user: 'bartender'
-      email: ''
-      pr-reviewers: 'abejgonzalez,jerryz123'
-      pr-labels: 'changelog:changed'
-      #github-token: ''
+    name: update-circt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update CIRCT
+        uses: circt/update-circt@v1.0.0
+        with:
+          user: 'bartender'
+          email: ''
+          pr-reviewers: 'abejgonzalez,jerryz123'
+          pr-labels: 'changelog:changed'
+          #github-token: ''
+          #
+          #  cancel-prior-workflows:
