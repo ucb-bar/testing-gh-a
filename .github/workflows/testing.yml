@@ -1,5 +1,7 @@
 name: testing
 
+on: push
+
 defaults:
   run:
     shell: bash -leo pipefail {0}
