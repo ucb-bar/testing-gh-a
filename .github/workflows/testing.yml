@@ -24,7 +24,7 @@ jobs:
         uses: circt/update-circt@v1.0.0
         with:
           user: 'bartender'
-          email: ''
+          email: 'firesimchipyard@gmail.com'
           pr-reviewers: 'abejgonzalez,jerryz123'
           pr-labels: 'changelog:changed'
           #github-token: ''
