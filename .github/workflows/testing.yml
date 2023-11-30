@@ -1,0 +1,22 @@
+name: testing
+
+defaults:
+  run:
+    shell: bash -leo pipefail {0}
+
+env:
+  GITHUB_TOKEN: ${{ secrets.BARTENDER_PERSONAL_ACCESS_TOKEN }}
+
+jobs:
+  install-circt:
+    name: Install CIRCT
+    uses: circt/install-circt@v1.1.1
+  update-circt:
+    name: Update CIRCT
+    uses: circt/update-circt@v1.0.0
+    with:
+      user: 'bartender'
+      email: ''
+      pr-reviewers: 'abejgonzalez,jerryz123'
+      pr-labels: 'changelog:changed'
+      #github-token: ''
