@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Install CIRCT
         uses: circt/install-circt@v1.1.1
+        with:
+          version-file: ${{ github.workspace }}/etc/circt.json
   update-circt:
     name: update-circt
     runs-on: ubuntu-latest
